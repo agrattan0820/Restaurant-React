@@ -21,8 +21,18 @@ function App() {
 }
 
 const Home = () => (
-  <div>
-    <h1>Home Page</h1>
+  <div className="container">
+    <div className="cta">
+      <h1>yummy sandwichs</h1>
+      <button>Look at the menu</button>
+      <address>
+        2848 Connecticut Avenue
+        <br />
+        Pittsburgh, PA 15216
+        <br />
+        412-576-2807
+      </address>
+    </div>
   </div>
 );
 

@@ -1,5 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  font-family: "Krona One", sans-serif;
 }
 
 nav {
@@ -8,6 +18,7 @@ nav {
   align-items: center;
   min-height: 10vh;
   background-color: blanchedalmond;
+  width: 50%;
 }
 
 nav a {
@@ -15,7 +26,6 @@ nav a {
   color: black;
   font-weight: bold;
 }
-
 .nav-links {
   width: 50%;
   display: flex;
@@ -23,4 +33,35 @@ nav a {
   align-items: center;
   list-style: none;
   text-decoration: none;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.cta {
+  margin-top: 10vh;
+}
+
+.cta h1 {
+  font-size: 8rem;
+}
+
+.cta button {
+  outline: none;
+  border: none;
+  background-color: bisque;
+  padding: 3rem;
+  font-family: "Krona One", sans-serif;
+  font-size: 1.2rem;
+}
+
+.emoji-logo {
+  font-size: 80px;
+}
+
+address {
+  margin-top: 10vh;
 }
