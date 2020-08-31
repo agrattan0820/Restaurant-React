@@ -23,7 +23,7 @@ function App() {
 const Home = () => (
   <div className="container">
     <div className="cta">
-      <h1>yummy sandwichs</h1>
+      <h1>yummy sandwiches</h1>
       <button>Look at the menu</button>
       <address>
         2848 Connecticut Avenue

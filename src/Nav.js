@@ -6,11 +6,12 @@ function Nav() {
   return (
     <nav>
       <Link to="/" exact>
-        <p>
+        <div className="logo">
+          <span className="restaurant-name">Danny's</span>
           <span className="emoji-logo" role="img" aria-label="Sandwich">
             &#x1F96A;
           </span>
-        </p>
+        </div>
       </Link>
       <ul className="nav-links">
         <Link to="/menu">

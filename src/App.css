@@ -1,15 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Russo+One&display=swap");
 
 html,
 body {
-  height: 100%;
   padding: 0;
   margin: 0;
+  background-image: url(./drew-coffman-jUOaONoXJQk-unsplash-edit.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box;
 }
 
 .App {
   text-align: center;
   font-family: "Krona One", sans-serif;
+  height: 100vh;
 }
 
 nav {
@@ -19,6 +23,8 @@ nav {
   min-height: 10vh;
   background-color: blanchedalmond;
   width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 nav a {
@@ -35,10 +41,22 @@ nav a {
   text-decoration: none;
 }
 
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurant-name {
+  font-size: 1.5rem;
+}
+
 .container {
   display: grid;
   place-items: center;
   height: 100%;
+  color: white;
+  margin-top: -12vh;
 }
 
 .cta {
@@ -59,9 +77,51 @@ nav a {
 }
 
 .emoji-logo {
-  font-size: 80px;
+  font-size: 40px;
 }
 
 address {
   margin-top: 10vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 500px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+fieldset {
+  width: 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
 }
