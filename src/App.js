@@ -4,14 +4,14 @@ import Home from "./Home";
 import Nav from "./Nav";
 import Menu from "./Menu";
 import Contact from "./Contact";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { TweenMax } from "gsap";
 import { CSSTransition } from "react-transition-group";
 
 const routes = [
-  { path: "/", name: "Home", component: Home },
-  { path: "/menu", name: "Menu", component: Menu },
-  { path: "/contact", name: "Contact", component: Contact },
+  { path: "/", name: "Home", Component: Home },
+  { path: "/menu", name: "Menu", Component: Menu },
+  { path: "/contact", name: "Contact", Component: Contact },
 ];
 
 function App() {
@@ -25,11 +25,20 @@ function App() {
     <Router>
       <div className="App" ref={(el) => (app = el)}>
         <Nav />
-        {routes.map(({ path, Component }) => (
+        {routes.map(({ path, name, Component }) => (
           <Route key={name} path={path} exact>
-            <div className="page">
-              <Component />
-            </div>
+            {({ match }) => (
+              <CSSTransition
+                in={match != null}
+                timeout={1200}
+                classNames="page"
+                unmountOnExit
+              >
+                <div className="page">
+                  <Component />
+                </div>
+              </CSSTransition>
+            )}
           </Route>
         ))}
       </div>

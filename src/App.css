@@ -8,6 +8,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .App {
@@ -52,12 +53,13 @@ nav a {
   font-size: 1.5rem;
 }
 
-.container {
+.page {
   display: grid;
   place-items: center;
   height: 100%;
   color: white;
   margin-top: -12vh;
+  opacity: 1;
 }
 
 .cta {
@@ -125,4 +127,23 @@ input:focus:invalid {
 
 .error.active {
   padding: 0.3em;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+  transition-delay: 600ms;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
 }

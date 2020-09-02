@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./App.css";
+import { TweenMax, Power3 } from "gsap";
 
 const sandwiches = [
   { name: "Turkey Club", price: "$7.99" },
@@ -8,9 +9,20 @@ const sandwiches = [
 ];
 
 function Menu() {
+  let menuTitle = useRef(null);
+
+  useEffect(() => {
+    TweenMax.from(menuTitle, 0.8, {
+      opacity: 0,
+      y: 20,
+      ease: Power3.easeOut,
+      delay: 1,
+    });
+  });
+
   return (
     <div className="container">
-      <h1>Menu</h1>
+      <h1 ref={(el) => (menuTitle = el)}>Menu</h1>
       <div className="menu-container"></div>
     </div>
   );

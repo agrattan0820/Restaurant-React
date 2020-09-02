@@ -14,6 +14,7 @@ function Nav() {
       delay: 0.6,
     });
   }, []);
+
   return (
     <nav
       ref={(el) => {

@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./App.css";
+import { TweenMax, Power3 } from "gsap";
 
 function Contact() {
+  let form = useRef(null);
+
+  useEffect(() => {
+    TweenMax.from(form, 0.8, {
+      opacity: 0,
+      y: 20,
+      ease: Power3.easeOut,
+      delay: 1,
+    });
+  });
+
   return (
     <div className="container">
       <div>
-        <form no>
+        <form noValidate ref={(el) => (form = el)}>
           <div>
             <label for="email">Email Address:</label>
             <input
