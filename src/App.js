@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./App.css";
 import Nav from "./Nav";
 import Menu from "./Menu";
 import Contact from "./Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { TweenMax } from "gsap";
 
 function App() {
+  let app = useRef(null);
+
+  useEffect(() => {
+    TweenMax.to(app, 0, { css: { visibility: "visible" } });
+  });
+
   return (
     <Router>
-      <div className="App">
+      <div className="App" ref={(el) => (app = el)}>
         <Nav />
         <Switch>
           <Route path="/" exact component={Home} />

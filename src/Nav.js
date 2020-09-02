@@ -6,11 +6,13 @@ import { TweenMax, Power3 } from "gsap";
 function Nav() {
   let navBar = useRef(null);
 
-  console.log(navBar);
-
   useEffect(() => {
     console.log(navBar);
-    TweenMax.from();
+    TweenMax.from(navBar, 1, {
+      x: -1000,
+      ease: Power3.easeOut,
+      delay: 0.6,
+    });
   }, []);
   return (
     <nav
