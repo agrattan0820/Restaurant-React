@@ -8,7 +8,7 @@ function Nav() {
 
   useEffect(() => {
     console.log(navBar);
-    TweenMax.from(navBar, 1, {
+    TweenMax.from(navBar, 0.8, {
       x: -1000,
       ease: Power3.easeOut,
       delay: 0.6,

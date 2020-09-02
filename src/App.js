@@ -1,10 +1,17 @@
 import React, { useRef, useEffect } from "react";
 import "./App.css";
+import Home from "./Home";
 import Nav from "./Nav";
 import Menu from "./Menu";
 import Contact from "./Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { TweenMax } from "gsap";
+
+const routes = [
+  { path: "/", name: "Home", exact, component: Home },
+  { path: "/menu", name: "Menu", component: Menu },
+  { path: "/contact", name: "Contact", component: Contact },
+];
 
 function App() {
   let app = useRef(null);
@@ -26,21 +33,5 @@ function App() {
     </Router>
   );
 }
-
-const Home = () => (
-  <div className="container">
-    <div className="cta">
-      <h1>yummy sandwiches</h1>
-      <button>Look at the menu</button>
-      <address>
-        2848 Connecticut Avenue
-        <br />
-        Pittsburgh, PA 15216
-        <br />
-        412-576-2807
-      </address>
-    </div>
-  </div>
-);
 
 export default App;
