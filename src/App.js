@@ -6,9 +6,10 @@ import Menu from "./Menu";
 import Contact from "./Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { TweenMax } from "gsap";
+import { CSSTransition } from "react-transition-group";
 
 const routes = [
-  { path: "/", name: "Home", exact, component: Home },
+  { path: "/", name: "Home", component: Home },
   { path: "/menu", name: "Menu", component: Menu },
   { path: "/contact", name: "Contact", component: Contact },
 ];
@@ -24,11 +25,13 @@ function App() {
     <Router>
       <div className="App" ref={(el) => (app = el)}>
         <Nav />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/menu" component={Menu} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
+        {routes.map(({ path, Component }) => (
+          <Route key={name} path={path} exact>
+            <div className="page">
+              <Component />
+            </div>
+          </Route>
+        ))}
       </div>
     </Router>
   );
