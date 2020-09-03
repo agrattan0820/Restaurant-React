@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import MenuItem from "./MenuItem";
 import "./App.css";
 import { TweenMax, Power3 } from "gsap";
 
@@ -23,7 +24,11 @@ function Menu() {
   return (
     <div className="container">
       <h1 ref={(el) => (menuTitle = el)}>Menu</h1>
-      <div className="menu-container"></div>
+      <div className="menu-container">
+        {sandwiches.map((sandwich) => (
+          <MenuItem name={sandwich.name} price={sandwich.price} />
+        ))}
+      </div>
     </div>
   );
 }
