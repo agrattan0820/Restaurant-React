@@ -87,6 +87,19 @@ address {
   margin-top: 10vh;
 }
 
+.menu-container {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-item-container {
+  color: black;
+  background-color: bisque;
+  width: 300px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
 form {
   display: flex;
   flex-direction: column;
