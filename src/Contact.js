@@ -35,6 +35,7 @@ function Contact() {
       <div className="contact-info">
         <h1 ref={(el) => (headline = el)}>
           Call us at
+          <br />
           <span className="phone-number">412-576-2807</span>
           <br />
           Or come and visit us!

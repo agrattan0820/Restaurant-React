@@ -101,6 +101,7 @@ nav a {
 .menu-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu-item-container {
@@ -128,6 +129,7 @@ nav a {
   width: 75%;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .phone-number {
@@ -185,4 +187,155 @@ fieldset {
 .page-exit-active {
   opacity: 0;
   transition: opacity 400ms;
+}
+
+@media screen and (max-width: 1600px) {
+  .menu-item-container {
+    width: 200px;
+    margin: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  nav {
+    width: 50%;
+  }
+
+  .cta h1 {
+    font-size: 5rem;
+  }
+
+  .cta button {
+    padding: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .emoji-logo {
+    font-size: 40px;
+  }
+
+  .cta address {
+    margin-top: 10vh;
+  }
+
+  .contact-container address {
+    font-size: 1.2rem;
+  }
+
+  .contact-container address:hover {
+    font-size: 1.5rem;
+  }
+
+  .contact-container {
+    width: 75%;
+  }
+
+  .contact-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .phone-number {
+    font-size: 2rem;
+  }
+
+  .phone-number:hover {
+    font-size: 2.5rem;
+  }
+
+  form {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-page h1 {
+    display: none;
+  }
+
+  .menu-item-container {
+    color: black;
+    background-color: bisque;
+    width: 125px;
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: bisque;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .nav-links {
+    font-size: 0.9rem;
+  }
+
+  .restaurant-name {
+    font-size: 1rem;
+  }
+
+  .emoji-logo {
+    font-size: 30px;
+  }
+
+  .cta {
+    margin-top: 10vh;
+  }
+
+  .cta h1 {
+    font-size: 2.8rem;
+  }
+
+  .cta button {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+
+  .emoji-logo {
+    font-size: 40px;
+  }
+
+  .cta address {
+    margin-top: 10vh;
+  }
+
+  .contact-container address {
+    font-size: 1rem;
+  }
+
+  .contact-container address:hover {
+    font-size: 1.2rem;
+  }
+
+  form {
+    display: none;
+  }
+
+  .contact-container {
+    width: 90%;
+  }
+
+  .contact-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .phone-number {
+    font-size: 1.8rem;
+    color: bisque;
+    transition: font-size ease-in-out 0.3s;
+    padding: 1rem;
+  }
+
+  .phone-number:hover {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
 }

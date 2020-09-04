@@ -47,7 +47,7 @@ function Menu() {
   });
 
   return (
-    <div className="container">
+    <div className="menu-page">
       <h1 ref={(el) => (menuTitle = el)}>Menu</h1>
       <div className="menu-container">
         {sandwiches.map((sandwich) => (
