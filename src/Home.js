@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import "./App.css";
+import { Link } from "react-router-dom";
 import { TweenMax, Power3 } from "gsap";
 
 function Home() {
@@ -18,7 +19,9 @@ function Home() {
     <div className="container">
       <div className="cta">
         <h1 ref={(el) => (headline = el)}>yummy sandwiches</h1>
-        <button>Look at the menu</button>
+        <Link to="/menu">
+          <button>Look at the menu</button>
+        </Link>
         <address>
           2848 Connecticut Avenue
           <br />

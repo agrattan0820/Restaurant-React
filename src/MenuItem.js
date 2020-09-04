@@ -6,15 +6,12 @@ function MenuItem({ name, price, image, index }) {
   let menuItem = useRef();
   console.log(menuItem);
 
-  const stagger = 0.2;
-
   useEffect(() => {
     TweenMax.from(menuItem, 0.8, {
       opacity: 0,
       x: -100,
       ease: Power3.easeOut,
       delay: 1.2,
-      stagger: `${stagger * index}`,
     });
   });
 

@@ -77,14 +77,25 @@ nav a {
   padding: 3rem;
   font-family: "Krona One", sans-serif;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .emoji-logo {
   font-size: 40px;
 }
 
-address {
+.cta address {
   margin-top: 10vh;
+}
+
+.contact-container address {
+  color: bisque;
+  font-size: 1.5rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.contact-container address:hover {
+  font-size: 1.8rem;
 }
 
 .menu-container {
@@ -112,6 +123,23 @@ address {
     0 100px 80px rgba(0, 0, 0, 0.07);
 }
 
+.contact-container {
+  display: flex;
+  width: 75%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.phone-number {
+  font-size: 3rem;
+  transition: all ease-in-out 0.3s;
+  color: bisque;
+}
+
+.phone-number:hover {
+  font-size: 4rem;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -119,39 +147,24 @@ form {
   height: 500px;
 }
 
-input[type="text"],
+form button {
+  font-family: "Krona One", sans-serif;
+  width: 250px;
+  height: 50px;
+  margin: 1rem auto;
+  outline: none;
+  border: none;
+  background-color: bisque;
+  cursor: pointer;
+}
+
 input[type="email"],
-input[type="number"],
 textarea,
 fieldset {
   width: 100%;
   border: 1px solid #333;
   box-sizing: border-box;
-}
-
-input:invalid {
-  border-color: #900;
-  background-color: #fdd;
-}
-
-input:focus:invalid {
-  outline: none;
-}
-
-.error {
-  width: 100%;
-  padding: 0;
-
-  font-size: 80%;
-  color: white;
-  background-color: #900;
-  border-radius: 0 0 5px 5px;
-
-  box-sizing: border-box;
-}
-
-.error.active {
-  padding: 0.3em;
+  margin-top: 1rem;
 }
 
 .page-enter {

@@ -15,7 +15,18 @@ function Contact() {
   });
 
   return (
-    <div className="container">
+    <div className="contact-container">
+      <div className="contact-info">
+        <h1>
+          Call us at <span className="phone-number">412-576-2807</span>
+        </h1>
+        <h1>Or come and visit us!</h1>
+        <address>
+          2848 Connecticut Avenue
+          <br />
+          Pittsburgh, PA 15216
+        </address>
+      </div>
       <div>
         <form noValidate ref={(el) => (form = el)}>
           <div>
@@ -30,27 +41,8 @@ function Contact() {
             <span class="error" aria-live="polite"></span>
           </div>
           <div>
-            <label for="zipCode">Zip Code:</label>
-            <input type="number" name="zipCode" id="zipCode" minlength="5" />
-            <span class="error" aria-live="polite"></span>
-          </div>
-          <div>
-            <label for="country">Country:</label>
-            <input type="text" name="country" id="country" minlength="3" />
-            <span class="error" aria-live="polite"></span>
-          </div>
-          <div>
-            <label for="password">Password:</label>
-            <input type="text" name="password" id="password" />
-            <span class="error" aria-live="polite"></span>
-          </div>
-          <div>
-            <label for="passwordConfirmation">Confirm your Password:</label>
-            <input
-              type="text"
-              name="passwordConfirmation"
-              id="passwordConfirmation"
-            />
+            <label htmlFor="messageArea">Message:</label>
+            <textarea name="messageArea" id="" cols="30" rows="10"></textarea>
             <span class="error" aria-live="polite"></span>
           </div>
           <button type="submit">Submit</button>
