@@ -4,24 +4,43 @@ import { TweenMax, Power3 } from "gsap";
 
 function Contact() {
   let form = useRef(null);
+  let phoneNumber = useRef(null);
+  let headline = useRef(null);
+  let address = useRef(null);
 
   useEffect(() => {
     TweenMax.from(form, 0.8, {
       opacity: 0,
       y: 20,
       ease: Power3.easeOut,
-      delay: 1,
+      delay: 1.6,
+    });
+
+    TweenMax.from(headline, 0.8, {
+      opacity: 0,
+      y: 20,
+      ease: Power3.easeOut,
+      delay: 0.8,
+    });
+
+    TweenMax.from(address, 0.8, {
+      opacity: 0,
+      y: 20,
+      ease: Power3.easeOut,
+      delay: 1.2,
     });
   });
 
   return (
     <div className="contact-container">
       <div className="contact-info">
-        <h1>
-          Call us at <span className="phone-number">412-576-2807</span>
+        <h1 ref={(el) => (headline = el)}>
+          Call us at
+          <span className="phone-number">412-576-2807</span>
+          <br />
+          Or come and visit us!
         </h1>
-        <h1>Or come and visit us!</h1>
-        <address>
+        <address ref={(el) => (address = el)}>
           2848 Connecticut Avenue
           <br />
           Pittsburgh, PA 15216

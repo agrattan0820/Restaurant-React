@@ -91,7 +91,7 @@ nav a {
 .contact-container address {
   color: bisque;
   font-size: 1.5rem;
-  transition: all ease-in-out 0.3s;
+  transition: font-size ease-in-out 0.3s;
 }
 
 .contact-container address:hover {
@@ -132,8 +132,9 @@ nav a {
 
 .phone-number {
   font-size: 3rem;
-  transition: all ease-in-out 0.3s;
   color: bisque;
+  transition: font-size ease-in-out 0.3s;
+  padding: 1rem;
 }
 
 .phone-number:hover {
