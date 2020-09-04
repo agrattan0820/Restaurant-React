@@ -12,21 +12,25 @@ const sandwiches = [
     name: "Italian Sub",
     price: "$7.99",
     image: Italian,
+    index: 1,
   },
   {
     name: "Chipotle Roast Beef",
     price: "$9.99",
     image: RoastBeef,
+    index: 2,
   },
   {
     name: "Egg and Avacado Toast",
     price: "$5.99",
     image: AvacadoToast,
+    index: 3,
   },
   {
     name: "Cranberry Pecan Chicken Salad",
     price: "$7.99",
     image: ChickenSalad,
+    index: 4,
   },
 ];
 
@@ -46,11 +50,13 @@ function Menu() {
     <div className="container">
       <h1 ref={(el) => (menuTitle = el)}>Menu</h1>
       <div className="menu-container">
-        {sandwiches.map((sandwich, i) => (
+        {sandwiches.map((sandwich) => (
           <MenuItem
+            key={sandwich.index}
             name={sandwich.name}
             price={sandwich.price}
             image={sandwich.image}
+            index={sandwich.index}
           />
         ))}
       </div>

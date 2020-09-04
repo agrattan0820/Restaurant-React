@@ -2,9 +2,11 @@ import React, { useRef, useEffect } from "react";
 import "./App.css";
 import { TweenMax, Power3 } from "gsap";
 
-function MenuItem({ name, price, image }) {
+function MenuItem({ name, price, image, index }) {
   let menuItem = useRef();
   console.log(menuItem);
+
+  const stagger = 0.2;
 
   useEffect(() => {
     TweenMax.from(menuItem, 0.8, {
@@ -12,11 +14,16 @@ function MenuItem({ name, price, image }) {
       x: -100,
       ease: Power3.easeOut,
       delay: 1.2,
+      stagger: `${stagger * index}`,
     });
   });
 
   return (
-    <div className="menu-item-container" ref={(el) => (menuItem = el)}>
+    <div
+      className="menu-item-container"
+      key={index}
+      ref={(el) => (menuItem = el)}
+    >
       <img src={image} alt={name} />
       <h3>{name}</h3>
       <p>{price}</p>
