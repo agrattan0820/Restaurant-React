@@ -5,7 +5,7 @@ import { TweenMax, Power3 } from "gsap";
 import Italian from "./images/eaters-collective-Gg5-K-mJwuQ-unsplash-min.jpg";
 import RoastBeef from "./images/pexels-erin-wang-1647163-min.jpg";
 import AvacadoToast from "./images/pexels-pixabay-236813-min.jpg";
-import ChickenSalad from "./images/youjeen-cho-sBKLiRiunK0-unsplash-min.jpg";
+import Salad from "./images/youjeen-cho-sBKLiRiunK0-unsplash-min.jpg";
 
 const sandwiches = [
   {
@@ -27,9 +27,9 @@ const sandwiches = [
     index: 3,
   },
   {
-    name: "Cranberry Pecan Chicken Salad",
+    name: "Cranberry Pecan Salad",
     price: "$7.99",
-    image: ChickenSalad,
+    image: Salad,
     index: 4,
   },
 ];

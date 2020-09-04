@@ -98,6 +98,10 @@ nav a {
   font-size: 1.8rem;
 }
 
+.menu-page h1 {
+  margin-bottom: 50px;
+}
+
 .menu-container {
   display: flex;
   justify-content: center;
@@ -118,10 +122,15 @@ nav a {
 
 .menu-item-container img {
   width: 75%;
+  height: 150px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
     0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
     0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
     0 100px 80px rgba(0, 0, 0, 0.07);
+
+  object-fit: cover;
+
+  margin-top: -50px;
 }
 
 .contact-container {
@@ -197,6 +206,14 @@ fieldset {
     font-size: 1rem;
   }
 
+  .menu-item-container img {
+    margin-top: 0;
+  }
+
+  .menu-page h1 {
+    margin-bottom: 0;
+  }
+
   nav {
     width: 50%;
   }
@@ -259,6 +276,10 @@ fieldset {
     margin: 1rem;
     padding: 0.5rem;
     font-size: 0.8rem;
+  }
+
+  .menu-item-container img {
+    width: 95%;
   }
 
   nav {
