@@ -280,6 +280,7 @@ fieldset {
 
   .menu-item-container img {
     width: 95%;
+    height: 100px;
   }
 
   nav {
