@@ -4,9 +4,26 @@ import "./App.css";
 import { TweenMax, Power3 } from "gsap";
 
 const sandwiches = [
-  { name: "Turkey Club", price: "$7.99" },
-  { name: "Roast Beef Sandwich", price: "$9.99" },
-  { name: "BLT", price: "$5.99" },
+  {
+    name: "Italian Sub",
+    price: "$7.99",
+    image: "./images/eaters-collective-Gg5-K-mJwuQ-unsplash-min.jpg",
+  },
+  {
+    name: "Chipotle Roast Beef",
+    price: "$9.99",
+    image: "./images/pexels-erin-wang-1647163-min.jpg",
+  },
+  {
+    name: "Egg and Avacado Toast",
+    price: "$5.99",
+    image: "./images/pexels-pixabay-236813-min.jpg",
+  },
+  {
+    name: "Cranberry Pecan Chicken Salad",
+    price: "$7.99",
+    image: "./images/youjeen-cho-sBKLiRiunK0-unsplash-min.jpg",
+  },
 ];
 
 function Menu() {
@@ -26,7 +43,11 @@ function Menu() {
       <h1 ref={(el) => (menuTitle = el)}>Menu</h1>
       <div className="menu-container">
         {sandwiches.map((sandwich) => (
-          <MenuItem name={sandwich.name} price={sandwich.price} />
+          <MenuItem
+            name={sandwich.name}
+            price={sandwich.price}
+            image={sandwich.image}
+          />
         ))}
       </div>
     </div>
