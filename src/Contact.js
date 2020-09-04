@@ -4,7 +4,6 @@ import { TweenMax, Power3 } from "gsap";
 
 function Contact() {
   let form = useRef(null);
-  let phoneNumber = useRef(null);
   let headline = useRef(null);
   let address = useRef(null);
 
