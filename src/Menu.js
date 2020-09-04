@@ -2,27 +2,31 @@ import React, { useRef, useEffect } from "react";
 import MenuItem from "./MenuItem";
 import "./App.css";
 import { TweenMax, Power3 } from "gsap";
+import Italian from "./images/eaters-collective-Gg5-K-mJwuQ-unsplash-min.jpg";
+import RoastBeef from "./images/pexels-erin-wang-1647163-min.jpg";
+import AvacadoToast from "./images/pexels-pixabay-236813-min.jpg";
+import ChickenSalad from "./images/youjeen-cho-sBKLiRiunK0-unsplash-min.jpg";
 
 const sandwiches = [
   {
     name: "Italian Sub",
     price: "$7.99",
-    image: "./images/eaters-collective-Gg5-K-mJwuQ-unsplash-min.jpg",
+    image: Italian,
   },
   {
     name: "Chipotle Roast Beef",
     price: "$9.99",
-    image: "./images/pexels-erin-wang-1647163-min.jpg",
+    image: RoastBeef,
   },
   {
     name: "Egg and Avacado Toast",
     price: "$5.99",
-    image: "./images/pexels-pixabay-236813-min.jpg",
+    image: AvacadoToast,
   },
   {
     name: "Cranberry Pecan Chicken Salad",
     price: "$7.99",
-    image: "./images/youjeen-cho-sBKLiRiunK0-unsplash-min.jpg",
+    image: ChickenSalad,
   },
 ];
 
@@ -42,7 +46,7 @@ function Menu() {
     <div className="container">
       <h1 ref={(el) => (menuTitle = el)}>Menu</h1>
       <div className="menu-container">
-        {sandwiches.map((sandwich) => (
+        {sandwiches.map((sandwich, i) => (
           <MenuItem
             name={sandwich.name}
             price={sandwich.price}

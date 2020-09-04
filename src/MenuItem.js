@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./App.css";
+import { TweenMax, Power3 } from "gsap";
 
 function MenuItem({ name, price, image }) {
+  let menuItem = useRef();
+  console.log(menuItem);
+
+  useEffect(() => {
+    TweenMax.from(menuItem, 0.8, {
+      opacity: 0,
+      x: -100,
+      ease: Power3.easeOut,
+      delay: 1.2,
+    });
+  });
+
   return (
-    <div className="menu-item-container">
+    <div className="menu-item-container" ref={(el) => (menuItem = el)}>
       <img src={image} alt={name} />
       <h3>{name}</h3>
       <p>{price}</p>
